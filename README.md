@@ -4,9 +4,9 @@
 
 These are the remaining steps:
 
-1. Run `vagrant up` and then `vagrant ssh`
+1. Clone this repository, run `vagrant up` and then `vagrant ssh`
 
-23. Run the following command to start the Docker Agent with APM enabled:
+2. Run the following command to start the Docker Agent with APM enabled:
 
 ```
 
