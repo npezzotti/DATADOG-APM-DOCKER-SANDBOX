@@ -1,8 +1,8 @@
 # Sending Traces to the Docker Agent From the Installed Host
 
-## This demonstrates how you can send traces to the Docker Agent from a non-containerized application running on the installed host.
+### This demonstrates how you can send traces to the Docker Agent from a non-containerized application running on the installed host.
 
-### *The setup script will install Docker, python, pip, ddtrace, and flask. A basic web server returning "Hello world" has been copied into the home directory.*
+### *The setup script will install Docker, python, pip, flask, and ddtrace (tracing library). A basic web server returning "Hello world" has been copied into the home directory.*
 
 These are the remaining steps:
 
@@ -20,7 +20,7 @@ docker run -d -v /var/run/docker.sock:/var/run/docker.sock:ro \
               datadog/agent:latest
 ```
 
-The important part of this command is `-p 127.0.0.1:8126:8126/tcp` which maps the port the agent is listening on for traces to your host, where your application's tracing library will send them. To make it available from any host, use `-p 8126:8126/tcp` instead.
+The important part of this command is `-p 127.0.0.1:8126:8126/tcp` which maps the port the agent is listening on for traces to your host, where your application's tracing client will send them. To make it available from any host, use `-p 8126:8126/tcp` instead.
    
 3. Run `ddtrace-run python app.py` from the home directory to start the server with automatic instrumentation.
 
