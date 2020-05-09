@@ -1,5 +1,7 @@
 # Sending Traces to the Docker Agent From the Installed Host
 
+## This demonstrates how you can send traces to the Docker Agent from a non-containerized application running on the installed host.
+
 ### *The setup script will install Docker, python, pip, ddtrace, and flask. A basic web server returning "Hello world" has been copied into the home directory.*
 
 These are the remaining steps:
@@ -25,5 +27,3 @@ The important part of this command is `-p 127.0.0.1:8126:8126/tcp \` which maps 
 3. Run `ddtrace-run python app.py` from the home directory to start the server with the trace agent.
 
 4. In a new terminal window, run curl `http://127.0.0.1:5050` a few times and navigate to the traces page in your account to see traces appearing.
-
-### This demonstrates how you can send traces to the Docker Agent from a non-containerized application running on the installed host.
