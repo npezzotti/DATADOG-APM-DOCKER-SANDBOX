@@ -1,6 +1,6 @@
 # Sending Traces to the Docker Agent From the Installed Host
 
-### The setup script will install Docker, python, pip, ddtrace, and flask. A basic web server returning "Hello world" has been copied into the home directory.
+### *The setup script will install Docker, python, pip, ddtrace, and flask. A basic web server returning "Hello world" has been copied into the home directory.*
 
 These are the remaining steps:
 
