@@ -11,7 +11,6 @@ These are the remaining steps:
 2. Run the following command to start the Docker Agent with APM enabled:
 
 ```
-
 docker run -d -v /var/run/docker.sock:/var/run/docker.sock:ro \
               -v /proc/:/host/proc/:ro \
               -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
@@ -19,7 +18,6 @@ docker run -d -v /var/run/docker.sock:/var/run/docker.sock:ro \
               -e DD_API_KEY=<YOUR_API_KEY> \
               -e DD_APM_ENABLED=true \
               datadog/agent:latest
-
 ```
 
 The important part of this command is `-p 127.0.0.1:8126:8126/tcp \` which maps the port the agent is listening on for traces to the host, where your application's tracing library will send them.
