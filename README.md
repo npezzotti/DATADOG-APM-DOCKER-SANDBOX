@@ -8,7 +8,7 @@ These are the remaining steps:
 
 1. Clone this repository, run `vagrant up` and then `vagrant ssh`
 
-2. Run the following command to start the Docker Agent with APM enabled:
+2. Run the following command with your API key to start the Docker Agent with APM enabled:
 
 ```
 docker run -d -v /var/run/docker.sock:/var/run/docker.sock:ro \
